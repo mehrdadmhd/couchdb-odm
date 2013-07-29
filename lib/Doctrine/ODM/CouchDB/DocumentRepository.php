@@ -163,7 +163,7 @@ class DocumentRepository implements ObjectRepository
     public function findOneBy(array $criteria)
     {
         if (count($criteria) == 1 && array_key_exists('id', $criteria))
-            $docs = $this->find($criteria['id']);
+            return $this->find($criteria['id']);
         else
             $docs = $this->findBy($criteria);
         
